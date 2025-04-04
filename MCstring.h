@@ -1,16 +1,16 @@
 #pragma once
 #include <stddef.h>
 
-typedef struct String String;
+typedef struct MCString MCString;
 
-struct String 
+struct MCString 
 {
-    void (*print)(const String* self);
-    void (*replace)(String* self, size_t index, char c);
-    void (*free)(String* self);
-    size_t(*length)(const String* self);
-
     void* _internal;
 };
 
-String string_create(const char* str);
+void MCString_print(const MCString* self);
+void MCString_replace(MCString* self, const size_t index, const char c);
+void MCString_delete(MCString* self, const size_t index);
+size_t MCString_length(const MCString* self);
+void MCString_free(MCString* self);
+MCString MCString_create(const char* str);

@@ -5,27 +5,48 @@
 
 #define INTERNAL (struct StringData*)self->_internal
 
-struct StringData 
+struct StringData
 {
     char* buffer;
     size_t length;
 };
 
-static void _print(const String* self) 
+void MCString_print(const MCString* self)
 {
     struct StringData* data = INTERNAL;
     if (data && data->buffer)
         printf("%s\n", data->buffer);
 }
 
-static void _replace(String* self, size_t index, char c) 
+void MCString_replace(MCString* self, const size_t index, const char c)
 {
     struct StringData* data = INTERNAL;
     if (data && data->buffer && index < data->length)
         data->buffer[index] = c;
 }
 
-static void _free(String* self)
+void MCString_delete(MCString* self, const size_t index)
+{
+    struct StringData* data = INTERNAL;
+    if (data || data->buffer || index <= data->length)
+    {
+        for (size_t i = index; i < data->length - 1; i++)
+            data->buffer[i] = data->buffer[i + 1];
+        data->length--;
+        data->buffer[data->length] = '\0';
+        char* new_buffer = realloc(data->buffer, data->length + 1);
+        if (new_buffer)
+            data->buffer = new_buffer;
+    }
+}
+
+size_t MCString_length(const MCString* self)
+{
+    struct StringData* data = INTERNAL;
+    return data ? data->length : 0;
+}
+
+void MCString_free(MCString* self)
 {
     if (!self) return;
 
@@ -40,13 +61,7 @@ static void _free(String* self)
     }
 }
 
-static size_t _length(const String* self) 
-{
-    struct StringData* data = INTERNAL;
-    return data ? data->length : 0;
-}
-
-String string_create(const char* str) 
+MCString MCString_create(const char* str)
 {
     struct StringData* internal = malloc(sizeof(struct StringData));
     internal->length = str ? strlen(str) : 0;
@@ -54,12 +69,8 @@ String string_create(const char* str)
     if (str) 
         memcpy(internal->buffer, str, internal->length + 1);
 
-    return (String) 
+    return (MCString)
     {
-        .print = _print,
-        .replace = _replace,
-        .length = _length,
-        .free = _free,
         ._internal = internal
     };
 }
