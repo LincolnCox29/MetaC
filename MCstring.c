@@ -56,6 +56,14 @@ void MCString_push_back(MCString* self, const char value)
     }
 }
 
+char MCString_at(MCString* self, const size_t index)
+{
+    struct StringData* data = INTERNAL;
+    if (data && data->buffer && index < data->length)
+        return data->buffer[index];
+    return '\0';
+}
+
 size_t MCString_length(const MCString* self)
 {
     struct StringData* data = INTERNAL;

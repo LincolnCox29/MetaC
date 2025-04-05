@@ -3,8 +3,15 @@
   "WorkspaceRootPath": "D:\\Projects\\MetaC\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C3FB4DFA-F5D1-4FD7-AB8E-F7ED042F9E24}|MetaC.vcxproj|D:\\Projects\\MetaC\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C3FB4DFA-F5D1-4FD7-AB8E-F7ED042F9E24}|MetaC.vcxproj|solutionrelative:test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C3FB4DFA-F5D1-4FD7-AB8E-F7ED042F9E24}|MetaC.vcxproj|D:\\Projects\\MetaC\\MCstring.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C3FB4DFA-F5D1-4FD7-AB8E-F7ED042F9E24}|MetaC.vcxproj|solutionrelative:MCstring.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3FB4DFA-F5D1-4FD7-AB8E-F7ED042F9E24}|MetaC.vcxproj|D:\\Projects\\MetaC\\MCstring.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -13,10 +20,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C3FB4DFA-F5D1-4FD7-AB8E-F7ED042F9E24}|MetaC.vcxproj|D:\\Projects\\MetaC\\MetaC.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C3FB4DFA-F5D1-4FD7-AB8E-F7ED042F9E24}|MetaC.vcxproj|solutionrelative:MetaC.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3FB4DFA-F5D1-4FD7-AB8E-F7ED042F9E24}|MetaC.vcxproj|D:\\Projects\\MetaC\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C3FB4DFA-F5D1-4FD7-AB8E-F7ED042F9E24}|MetaC.vcxproj|solutionrelative:test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,37 +29,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "stdio.h",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
+              "ToolTip": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
+              "ViewState": "AgIAAHECAAAAAAAAAAArwIUCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-05T13:54:00.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MCstring.c",
               "DocumentMoniker": "D:\\Projects\\MetaC\\MCstring.c",
               "RelativeDocumentMoniker": "MCstring.c",
               "ToolTip": "D:\\Projects\\MetaC\\MCstring.c",
               "RelativeToolTip": "MCstring.c",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAFkAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-04-02T11:23:03.281Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MCstring.h",
               "DocumentMoniker": "D:\\Projects\\MetaC\\MCstring.h",
               "RelativeDocumentMoniker": "MCstring.h",
               "ToolTip": "D:\\Projects\\MetaC\\MCstring.h",
               "RelativeToolTip": "MCstring.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-02T11:23:25.456Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MetaC.h",
               "DocumentMoniker": "D:\\Projects\\MetaC\\MetaC.h",
               "RelativeDocumentMoniker": "MetaC.h",
@@ -64,18 +78,17 @@
               "RelativeToolTip": "MetaC.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-02T11:05:04.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T11:05:04.991Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "test.c",
               "DocumentMoniker": "D:\\Projects\\MetaC\\test.c",
               "RelativeDocumentMoniker": "test.c",
               "ToolTip": "D:\\Projects\\MetaC\\test.c",
               "RelativeToolTip": "test.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-04-02T11:02:40.861Z",
               "EditorCaption": ""

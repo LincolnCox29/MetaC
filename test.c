@@ -18,6 +18,8 @@ int main()
 	//test append
 	MCString_push_back(&str, '!');
 	MCString_print(&str);
+	//test at
+	printf("%c\n", MCString_at(&str, 0));
 	//test free
 	MCString_free(&str);
 }
