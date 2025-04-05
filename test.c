@@ -15,6 +15,9 @@ int main()
 	//test delete
 	MCString_delete(&str, 2);
 	MCString_print(&str);
+	//test append
+	MCString_push_back(&str, '!');
+	MCString_print(&str);
 	//test free
 	MCString_free(&str);
 }

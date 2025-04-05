@@ -34,9 +34,25 @@ void MCString_delete(MCString* self, const size_t index)
             data->buffer[i] = data->buffer[i + 1];
         data->length--;
         data->buffer[data->length] = '\0';
-        char* new_buffer = realloc(data->buffer, data->length + 1);
-        if (new_buffer)
-            data->buffer = new_buffer;
+        char* newBuffer = realloc(data->buffer, data->length + 1);
+        if (newBuffer)
+            data->buffer = newBuffer;
+    }
+}
+
+void MCString_push_back(MCString* self, const char value)
+{
+    struct StringData* data = INTERNAL;
+    if (data && data->buffer)
+    {
+        char* newBuffer = realloc(data->buffer, data->length + 2);
+        if (newBuffer)
+        {
+            data->buffer = newBuffer;
+            data->buffer[data->length] = value;
+            data->buffer[data->length + 1] = '\0';
+            data->length++;
+        }
     }
 }
 
