@@ -70,6 +70,24 @@ size_t MCString_length(const MCString* self)
     return data ? data->length : 0;
 }
 
+void MCString_insert(MCString* self, const char value, const size_t index) 
+{
+    struct StringData* data = INTERNAL;
+    if (!data || !data->buffer || index > data->length) 
+        return;
+    char* new_buffer = realloc(data->buffer, data->length + 2);
+    if (!new_buffer) 
+        return;
+    memmove(
+        new_buffer + index + 1,
+        new_buffer + index,
+        data->length - index + 1
+    );
+    new_buffer[index] = value;
+    data->buffer = new_buffer;
+    data->length++;
+}
+
 void MCString_free(MCString* self)
 {
     if (!self) return;
